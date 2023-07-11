@@ -20,6 +20,33 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
+# pcl
+find_package(PCL REQUIRED)
+# opencv
+find_package(OpenCV REQUIRED)
+# eigen
+find_package(Eigen3 REQUIRED)
+
+# selbst
+include_directories(~/buendia)
+include_directories(~/dieschwesterwaternderengle)
+
+# opencv
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+# pcl
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+# eigen
+include_directories(${EIGEN3_INCLUDE_DIRS})
+
+# VTK
+find_package(VTK REQUIRED)
+include_directories(/usr/include/vtk-7.1)
+
+
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
@@ -64,7 +91,15 @@ else()
     endif()
 endif()
 
-target_link_libraries(ichhabedirnieeinenrosengartenversprochen PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(ichhabedirnieeinenrosengartenversprochen PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
+    pthread
+
+    ${OpenCV_LIBS}
+
+    ${PCL_LIBRARIES}
+
+    ${VTK_LIBRARIES}
+    )
 
 set_target_properties(ichhabedirnieeinenrosengartenversprochen PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
