@@ -1,8 +1,7 @@
-#文件等级：密一
-#author:klug
-#我从未许诺你玫瑰花园
-#start:230710
-#last:230710
+# author:klug
+# 我从未许诺你玫瑰花园
+# start:230710
+# last:230712
 
 cmake_minimum_required(VERSION 3.5)
 
@@ -27,10 +26,6 @@ find_package(OpenCV REQUIRED)
 # eigen
 find_package(Eigen3 REQUIRED)
 
-# selbst
-include_directories(~/buendia)
-include_directories(~/dieschwesterwaternderengle)
-
 # opencv
 include_directories(${OpenCV_INCLUDE_DIRS})
 
@@ -48,24 +43,29 @@ include_directories(/usr/include/vtk-7.1)
 
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+    main.cpp
 
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_img.hpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_img.cpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_cal.hpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_cal.cpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_construct.hpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_construct.cpp
+    # ein camera
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_img.hpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_img.cpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_cal.hpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_cal.cpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_construct.hpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_construct.cpp
 
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_img.hpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_img.cpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_cal.hpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_cal.cpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_construct.hpp
-        ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_construct.cpp
+    # zwei camera
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_img.hpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_img.cpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_cal.hpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_cal.cpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_construct.hpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_construct.cpp
+
+    #point cloud process
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.hpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.cpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/construct_pointcloud.hpp
+    ~/klug/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/construct_pointcloud.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
