@@ -1,7 +1,7 @@
-# author:klug
+﻿# author:klug
 # 我从未许诺你玫瑰花园
 # start:230710
-# last:230712
+# last:230801
 
 cmake_minimum_required(VERSION 3.5)
 
@@ -28,6 +28,7 @@ find_package(Eigen3 REQUIRED)
 
 # opencv
 include_directories(${OpenCV_INCLUDE_DIRS})
+#include_directories(/usr/local/include/opencv4)
 
 # pcl
 include_directories(${PCL_INCLUDE_DIRS})
@@ -41,31 +42,38 @@ include_directories(${EIGEN3_INCLUDE_DIRS})
 find_package(VTK REQUIRED)
 include_directories(/usr/include/vtk-7.1)
 
+include_directories(~/ichhabedirnieeinenrosengartenversprochen)
+include_directories(~/undb)
 
 set(PROJECT_SOURCES
     main.cpp
+    source.hpp
 
     # ein camera
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_img.hpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_img.cpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_cal.hpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_cal.cpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_construct.hpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/project_construct.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_img.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_img.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_cal.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_cal.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_construct.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_construct.cpp
 
     # zwei camera
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_img.hpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_img.cpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_cal.hpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_cal.cpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_construct.hpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_project_construct.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_img.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_img.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_cal.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_cal.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_construct.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_construct.cpp
 
-    #point cloud process
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.hpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.cpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/construct_pointcloud.hpp
-    ~/klug/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/construct_pointcloud.cpp
+    # point cloud process
+    #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.hpp
+    #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.cpp
+    #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/construct_pointcloud.hpp
+    #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/construct_pointcloud.cpp
+
+    # undb
+    ~/undb/cameraGene/cameraGene.cpp
+    ~/undb/cameraGene/cameraGene.hpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

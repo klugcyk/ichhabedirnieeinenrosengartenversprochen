@@ -1,4 +1,4 @@
-/*
+﻿/*
     文件等级：密一
     author:klug
     献给不喜欢我的弗雷德里希冯海因洛特
@@ -6,12 +6,14 @@
     last:230706
 */
 
-#ifndef ZWEI_PROJECT_IMG_HPP
-#define ZWEI_PROJECT_IMG_HPP
+#ifndef zwei_phase_img_HPP
+#define zwei_phase_img_HPP
 
-namespace zwei_project
+#include <opencv2/opencv.hpp>
+
+namespace zweiPhase
 {
 
 };
 
-#endif // ZWEI_PROJECT_IMG_HPP
+#endif // zwei_phase_img_HPP
