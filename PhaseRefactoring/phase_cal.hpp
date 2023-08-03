@@ -9,7 +9,7 @@
 #ifndef phase_cal_HPP
 #define phase_cal_HPP
 
-#include "ProjectRefactoring/phase_img.hpp"
+#include "PhaseRefactoring/phase_img.hpp"
 #include "cameraGene/cameraGene.hpp"
 #include <opencv2/opencv.hpp>
 

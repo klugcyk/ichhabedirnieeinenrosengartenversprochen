@@ -50,20 +50,20 @@ set(PROJECT_SOURCES
     source.hpp
 
     # ein camera
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_img.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_img.cpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_cal.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_cal.cpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_construct.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/phase_construct.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_img.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_img.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_cal.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_cal.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_construct.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_construct.cpp
 
     # zwei camera
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_img.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_img.cpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_cal.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_cal.cpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_construct.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/ProjectRefactoring/zwei_phase_construct.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_img.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_img.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_cal.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_cal.cpp
+    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_construct.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_construct.cpp
 
     # point cloud process
     #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.hpp

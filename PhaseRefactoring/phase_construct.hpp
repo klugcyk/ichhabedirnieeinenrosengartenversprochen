@@ -9,8 +9,8 @@
 #ifndef phase_construct_HPP
 #define phase_construct_HPP
 
-#include "ProjectRefactoring/phase_cal.hpp"
-#include "ProjectRefactoring/phase_img.hpp"
+#include "PhaseRefactoring/phase_cal.hpp"
+#include "PhaseRefactoring/phase_img.hpp"
 #include <opencv2/opencv.hpp>
 
 namespace phase
