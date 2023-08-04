@@ -11,6 +11,7 @@
 
 #include <opencv2/opencv.hpp>
 #include "cameraGene/cameraGene.hpp"
+#include "source.hpp"
 
 #define zweiPhaseCalPrintMsgInfo
 #define zweiPhaseCalPrintErrorInfo

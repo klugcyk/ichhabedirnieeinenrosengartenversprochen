@@ -74,6 +74,8 @@ set(PROJECT_SOURCES
     # undb
     ~/undb/cameraGene/cameraGene.cpp
     ~/undb/cameraGene/cameraGene.hpp
+    ~/undb/meinCV/meinCamera.cpp
+    ~/undb/meinCV/meinCamera.hpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
