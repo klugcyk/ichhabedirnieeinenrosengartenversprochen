@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "source.hpp"
 
 namespace projectImg
 {
@@ -36,19 +37,39 @@ void geneProjectImg::cosImg(int row,int col,int waveLength,bool type)
     cv::Mat resImg(row,col,CV_8UC1);
 
     int wave=0;
+    int value=0;
+    double step=2*Pi/waveLength;
     if(type==1)
     {
         for(size_t col_=0;col_<col;col_++)
         {
             //计算条纹数值
-            int value=0;
-            //
+            value=127*(cos(step*wave)+1);
             for(size_t row_=0;row_<row;row_++)
             {
-
                 resImg.at<uchar>(row_,col_)=value;
-                wave++;
             }
+
+            wave++;
+
+            if(wave>=waveLength)
+            {
+                wave=0;
+            }
+        }
+    }
+    else if(type==0)
+    {
+        for(size_t row_=0;row_<row;row_++)
+        {
+            //计算条纹数值
+            value=127*(cos(step*wave)+1);
+            for(size_t col_=0;col_<col;col_++)
+            {
+                resImg.at<uchar>(row_,col_)=value;
+            }
+
+            wave++;
 
             if(wave>=waveLength)
             {
@@ -58,23 +79,9 @@ void geneProjectImg::cosImg(int row,int col,int waveLength,bool type)
     }
     else
     {
-        for(size_t row_=0;row_<row;row_++)
-        {
-            //计算条纹数值
-            int value=0;
-
-            for(size_t col_=0;col_<col;col_++)
-            {
-
-                resImg.at<uchar>(row_,col_)=value;
-                wave++;
-            }
-
-            if(wave>=waveLength)
-            {
-                wave=0;
-            }
-        }
+#ifdef geneProjectImgPrintError
+        printf("generate the project image type error...\n");
+#endif
     }
 
     projectedImg=resImg;

@@ -13,6 +13,9 @@
 #include "math/geometry.hpp"
 
 #define geneProjectImgSave
+#define geneProjectImgPrintError
+#define geneProjectImgPrintMsg
+#define geneProjectImgPrintData
 
 namespace projectImg
 {
