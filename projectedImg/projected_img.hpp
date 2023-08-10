@@ -12,6 +12,8 @@
 #include <opencv2/opencv.hpp>
 #include "math/geometry.hpp"
 
+#define geneProjectImgSave
+
 namespace projectImg
 {
 
@@ -22,22 +24,14 @@ public:
     //functions
     geneProjectImg();
     ~geneProjectImg();
+    void cosImg(int row,int col,int waveLength,bool type);
+    void sinImg(int row,int col,int waveLength,bool type);
 
 public:
     //variable
     cv::Mat projectedImg;
     cv::Mat reprojectedImg;
     mathGeometry::point2 projectLocation;
-
-protected:
-    //functions
-
-    //variable
-
-private:
-    //functions
-
-    //variable
 
 };
 

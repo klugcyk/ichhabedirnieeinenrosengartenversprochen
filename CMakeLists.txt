@@ -65,9 +65,9 @@ set(PROJECT_SOURCES
     ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_construct.hpp
     ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_construct.cpp
 
-    # common
-    ~/ichhabedirnieeinenrosengartenversprochen/projectedImg/projectedImg.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/projectedImg/projectedImg.cpp
+    # c
+    ~/ichhabedirnieeinenrosengartenversprochen/projectedImg/projected_img.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/projectedImg/projected_img.cpp
 
     # undb
     ~/undb/cameraGene/cameraGene.cpp
