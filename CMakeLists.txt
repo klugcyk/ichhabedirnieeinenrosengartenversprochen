@@ -1,7 +1,7 @@
 ﻿# author:klug
 # 我从未许诺你玫瑰花园
 # start:230710
-# last:230801
+# last:230810
 
 cmake_minimum_required(VERSION 3.5)
 
@@ -65,17 +65,17 @@ set(PROJECT_SOURCES
     ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_construct.hpp
     ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_construct.cpp
 
-    # point cloud process
-    #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.hpp
-    #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/pointcloud.cpp
-    #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/construct_pointcloud.hpp
-    #~/ichhabedirnieeinenrosengartenversprochen/PointCloudProcess/construct_pointcloud.cpp
+    # common
+    ~/ichhabedirnieeinenrosengartenversprochen/projectedImg/projectedImg.hpp
+    ~/ichhabedirnieeinenrosengartenversprochen/projectedImg/projectedImg.cpp
 
     # undb
     ~/undb/cameraGene/cameraGene.cpp
     ~/undb/cameraGene/cameraGene.hpp
     ~/undb/meinCV/meinCamera.cpp
     ~/undb/meinCV/meinCamera.hpp
+    ~/undb/math/geometry.cpp
+    ~/undb/math/geometry.hpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
