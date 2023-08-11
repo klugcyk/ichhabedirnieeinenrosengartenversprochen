@@ -19,10 +19,14 @@ int main(/*int argc, char *argv[]*/)
 {
 #ifdef zweiChoose
     projectImg::geneProjectImg gpi;
-    gpi.cosImg(2000,1000,50,1);
-    cv::imwrite("/home/klug/img/pl.png",gpi.projectedImg);
-    gpi.cosImg(2000,1000,50,0);
-    cv::imwrite("/home/klug/img/pk.png",gpi.projectedImg);
+    gpi.cosImg4PhaseShift(2000,1000,50,longitudinal,1);
+    cv::imwrite("/home/klug/img/p1.png",gpi.projectedImg);
+    gpi.cosImg4PhaseShift(2000,1000,50,transverse,2);
+    cv::imwrite("/home/klug/img/p2.png",gpi.projectedImg);
+    gpi.cosImg4PhaseShift(2000,1000,50,longitudinal,3);
+    cv::imwrite("/home/klug/img/p3.png",gpi.projectedImg);
+    gpi.cosImg4PhaseShift(2000,1000,50,transverse,4);
+    cv::imwrite("/home/klug/img/p4.png",gpi.projectedImg);
     //zweiPhase::zweiPhaseCal pc;
 #else
     phase::phaseConstruct pc;

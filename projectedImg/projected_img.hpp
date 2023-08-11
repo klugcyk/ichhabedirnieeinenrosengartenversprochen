@@ -12,6 +12,9 @@
 #include <opencv2/opencv.hpp>
 #include "math/geometry.hpp"
 
+#define longitudinal 1 //纵向
+#define transverse 0 //横向
+
 #define geneProjectImgSave
 #define geneProjectImgPrintError
 #define geneProjectImgPrintMsg
@@ -27,11 +30,14 @@ public:
     //functions
     geneProjectImg();
     ~geneProjectImg();
-    void cosImg(int row,int col,int waveLength,bool type);
-    void sinImg(int row,int col,int waveLength,bool type);
+    void cosImg(int row,int col,int waveLength=10,bool type=0);
+    void sinImg(int row,int col,int waveLength=10,bool type=0);
+    void cosImg4PhaseShift(int row,int col,int waveLength=10,bool type=0,int shift=0);
+    void sinImg4PhaseShift(int row,int col,int waveLength=10,bool type=0,int shift=0);
+    void lineImg(int row,int col,int waveLength=10,bool type=0);
 
 public:
-    //variable
+    //variables
     cv::Mat projectedImg;
     cv::Mat reprojectedImg;
     mathGeometry::point2 projectLocation;
