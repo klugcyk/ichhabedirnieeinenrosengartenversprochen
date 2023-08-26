@@ -3,7 +3,7 @@
     author:klug
     我从未许诺你玫瑰花园
     start:230710
-    last:230810
+    last:230811
 */
 
 #include <iostream>
@@ -19,14 +19,10 @@ int main(/*int argc, char *argv[]*/)
 {
 #ifdef zweiChoose
     projectImg::geneProjectImg gpi;
-    gpi.cosImg4PhaseShift(2000,1000,50,longitudinal,1);
-    cv::imwrite("/home/klug/img/p1.png",gpi.projectedImg);
-    gpi.cosImg4PhaseShift(2000,1000,50,transverse,2);
-    cv::imwrite("/home/klug/img/p2.png",gpi.projectedImg);
-    gpi.cosImg4PhaseShift(2000,1000,50,longitudinal,3);
-    cv::imwrite("/home/klug/img/p3.png",gpi.projectedImg);
-    gpi.cosImg4PhaseShift(2000,1000,50,transverse,4);
-    cv::imwrite("/home/klug/img/p4.png",gpi.projectedImg);
+
+    //gpi.lissajousImgRGB(1000,1000/*,20,5,3,4,Pi/6*/);
+    gpi.lineImg(1000,1000,255,50,longitudinal);
+    cv::imwrite("/home/klug/img/lsr.png",gpi.projectedImg);
     //zweiPhase::zweiPhaseCal pc;
 #else
     phase::phaseConstruct pc;

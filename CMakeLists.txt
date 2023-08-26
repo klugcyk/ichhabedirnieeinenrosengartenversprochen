@@ -1,7 +1,8 @@
-﻿# author:klug
+﻿# 文件等级:密一
+# author:klug
 # 我从未许诺你玫瑰花园
 # start:230710
-# last:230810
+# last:230825
 
 cmake_minimum_required(VERSION 3.5)
 
@@ -20,7 +21,7 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 # pcl
-find_package(PCL REQUIRED)
+#find_package(PCL REQUIRED)
 # opencv
 find_package(OpenCV REQUIRED)
 # eigen
@@ -31,51 +32,52 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 #include_directories(/usr/local/include/opencv4)
 
 # pcl
-include_directories(${PCL_INCLUDE_DIRS})
-link_directories(${PCL_LIBRARY_DIRS})
-add_definitions(${PCL_DEFINITIONS})
+#include_directories(${PCL_INCLUDE_DIRS})
+#link_directories(${PCL_LIBRARY_DIRS})
+#add_definitions(${PCL_DEFINITIONS})
 
 # eigen
 include_directories(${EIGEN3_INCLUDE_DIRS})
 
 # VTK
-find_package(VTK REQUIRED)
-include_directories(/usr/include/vtk-7.1)
+#find_package(VTK REQUIRED)
+#include_directories(/usr/include/vtk-7.1)
 
 include_directories(~/ichhabedirnieeinenrosengartenversprochen)
 include_directories(~/undb)
+include_directories(~/buendia)
 
 set(PROJECT_SOURCES
     main.cpp
-    source.hpp
+    #source.hpp
 
     # ein camera
-    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_img.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_img.cpp
-    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_cal.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_cal.cpp
-    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_construct.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/PhaseRefactoring/phase_construct.cpp
+    ~/undb/PhaseRefactoring/phase_img.hpp
+    ~/undb/PhaseRefactoring/phase_img.cpp
+    ~/undb/PhaseRefactoring/phase_cal.hpp
+    ~/undb/PhaseRefactoring/phase_cal.cpp
+    ~/undb/PhaseRefactoring/phase_construct.hpp
+    ~/undb/PhaseRefactoring/phase_construct.cpp
 
     # zwei camera
-    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_img.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_img.cpp
-    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_cal.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_cal.cpp
-    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_construct.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/zweiPhaseRefactoring/zwei_phase_construct.cpp
+    #~/undb/zweiPhaseRefactoring/zwei_phase_img.hpp
+    #~/undb/zweiPhaseRefactoring/zwei_phase_img.cpp
+    #~/undb/zweiPhaseRefactoring/zwei_phase_cal.hpp
+    #~/undb/zweiPhaseRefactoring/zwei_phase_cal.cpp
+    #~/undb/zweiPhaseRefactoring/zwei_phase_construct.hpp
+    #~/undb/zweiPhaseRefactoring/zwei_phase_construct.cpp
 
-    # c
-    ~/ichhabedirnieeinenrosengartenversprochen/projectedImg/projected_img.hpp
-    ~/ichhabedirnieeinenrosengartenversprochen/projectedImg/projected_img.cpp
-
-    # undb
     ~/undb/cameraGene/cameraGene.cpp
     ~/undb/cameraGene/cameraGene.hpp
-    ~/undb/meinCV/meinCamera.cpp
-    ~/undb/meinCV/meinCamera.hpp
+    #~/undb/meinCV/meinCamera.cpp
+    #~/undb/meinCV/meinCamera.hpp
     ~/undb/math/geometry.cpp
     ~/undb/math/geometry.hpp
+    ~/undb/projectedImg/projected_img.cpp
+    ~/undb/projectedImg/projected_img.hpp
+
+    ~/buendia/Projector/Projector.cpp
+    ~/buendia/Projector/Projector.hpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -106,9 +108,9 @@ target_link_libraries(ichhabedirnieeinenrosengartenversprochen PRIVATE Qt${QT_VE
 
     ${OpenCV_LIBS}
 
-    ${PCL_LIBRARIES}
+    #${PCL_LIBRARIES}
 
-    ${VTK_LIBRARIES}
+    #${VTK_LIBRARIES}
     )
 
 set_target_properties(ichhabedirnieeinenrosengartenversprochen PROPERTIES
